@@ -1,1 +1,1 @@
-# Thư mục chứa file tài liệu
+# Thư mục chứa file tài liệu Zabbix
