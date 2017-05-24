@@ -1,5 +1,15 @@
 # Hướng cài đặt Zabbix server bằng script
 
+- Chuẩn bị :
+
+	 Mô hình 
+	 
+	<img src="https://github.com/nguyenminh12051997/mdt-ghichep-zabbix/blob/master/images/mo%20hinh.png?raw=true">
+	
+	IP Planing
+	
+	<img src="https://github.com/nguyenminh12051997/mdt-ghichep-zabbix/blob/master/images/ip.PNG?raw=true">
+
 - Download script vào cài đặt trên server
 
 ```sh
