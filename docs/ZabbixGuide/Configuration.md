@@ -104,4 +104,49 @@ Trong đó :
 | Host/templates | Liên kết các host hoặc các Templates khác đến Template đang tạo |
 | Description | Mô tả về Template đang tạo |
 
-- Cách 2 : Nhập từ 1 file Template.xml
+Tạo liên kết các Template :
+
+![cf](/images/Linked_template)
+
+Người quản trị có thể liên kết các Template với nhau nhằm bổ sung các thông số cho nhau giữa các template.
+
+
+- Cách 2 : Nhập từ 1 file Template.xml : Nếu đã có một template dạng file xml thì chỉ cần upload lên, Zabbix sẽ tự động convert sang các thông số cho Template.
+
+<a name=23></a>
+### 2.3 Hosts
+
+Trong mục này , người quản trị có thể  cấu hình và huy trì các host.
+
+Khi click vào mục này, một danh sách hiện ra :
+
+![host](/images/hosts.png)
+
+Trong đó :
+
+| Cột | Mô tả |
+|---------------|---------------|
+| Name | Tên của host. Click vào tên Host sẽ hiển thị ra khung cấu hình host|
+| Elements (Applications, Items, Triggers, Graphs, Discovery, Web)| Click vào tên các thành phần sẽ hiển thị các item, trigger,...Số lượng các phần tử tương ứng hiển thị bằng màu xám|
+| Interface | Hiển thị địa chỉ và cổng lắng nghe của Host |
+| Status | Hiển thị trạng thái của host. Có 2 trạng thái Enable màu xanh và Disable màu đó |
+| Availability | Tính khả dụng của host, cho biết Host đang hoạt động ở chế độ nào và trạng thái kết nối ra sao.Green : Khả dụng, Red : không khả dụng, Gray : Không biết hoặc không được cấu hình |
+|Agent encryption | Hiển thị trạng thái mã hóa đến các host . None : không mã hóa, PSK : sử dụng pre-shared key, Cert : sử dụng certificate |
+| Info | Hiển thị các thông tin lỗi |
+
+**Tùy chọn chỉnh sửa theo Host :**
+- Enable : thay đổi trạng thái Host sang "Monitored"
+- Disable : Thay đổi trạng thái host sang "Not Monitored"
+- Export : Chuyển host thành file XML
+- Mass update : Đồng loạt cập nhật các thuộc tính cho máy chủ
+- Delete : Xoa các host
+
+**Filter**
+
+Chức năng này cho phép hiển thị các Host theo các tùy chọn Lọc :
+![host](/images/hosts_filter.png)
+
+- Name like : Lọc theo tên
+- DNS like : Lọc theo DNS
+- IP like : Lọc theo  địa chỉ IP
+- Port like : Lọc theo port dịch vụ
