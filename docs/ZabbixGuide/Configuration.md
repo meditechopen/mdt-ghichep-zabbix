@@ -57,3 +57,51 @@ Như đã giới thiệu ở trên, phần này cho phép người quản trị 
 - Group name : Tên nhóm
 - Host in : Các host trong group
 - Other host| Groups : Thêm host từ các group khác
+
+<a name=22></a>
+
+### 2.2 Template
+
+Trong mục này, người quản trị có thể tạo, sửa, xóa các Template. Trong mục này cũng cung cấp cách tạo, sửa xóa các Applicaton,item , trigger , Graphs, Screens, Discovery rules và Web scearios.
+
+![Tp](/images/Template.png)
+
+Trong đó :
+
+|Cột | Mô tả |
+|-----------|---------------|
+| Templates | Hiển thị tất cả các Template có sẵn hoặc được tạo thêm trên Zabbix Server |
+|Applications | Hiển thị số lượng Application trong mỗi Template. Khi click vào sẽ hiện ra các Application có trong Template |
+| Item | Hiển thị số lượng các item trong mỗi Template.  Khi click vào sẽ hiện ra các Item  có trong Template |
+| Graphs | Hiển thị số lượng Graph có trong Teamplate.  Khi click vào sẽ hiện ra các Graphs có trong Template |
+| Screens | Hiên thị số lượng các Screen trong Teamplate .  Khi click vào sẽ hiện ra các Screen có trong Template |
+| Discovery | Hiển thị số lượng các Discovery trong Template |
+| Web | Hiển thị số lượng các web trong Template |
+| Linked templates | Hiển thị tất cả các template kết nối với nó |
+|Linked to | Hiển thị các liên kết mà Template đó kết nối |
+
+**Tùy chọn chỉnh sửa theo Template :**
+- Export : Xuất Template thành 1 tệp tin XML
+- Delete : Xóa các Template khỏi các liên kết của nó với các host.
+Delete and Clear : Xóa Template và các liên kết của nó với host.
+
+** Tạo 1 Template :**
+
+Để tạo 1 Template có 2 cách :
+- Cách 1 :  Click chuột vào `Creat Template` góc trên bên phải màn hình.
+
+Sau khi click sẽ hiện ra :
+![cf](images/Creat_Template)
+
+Trong đó :
+
+| Hàng | Mô tả |
+|----------------|----------|
+| Template name | Tên Template |
+| Visible name | Tên hiển thị của template |
+| Group | Thêm các group kết nối đến Template |
+| New group | Tạo thêm 1 group mới liên kết đên Template |
+| Host/templates | Liên kết các host hoặc các Templates khác đến Template đang tạo |
+| Description | Mô tả về Template đang tạo |
+
+- Cách 2 : Nhập từ 1 file Template.xml
