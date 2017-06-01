@@ -91,7 +91,7 @@ Delete and Clear : Xóa Template và các liên kết của nó với host.
 - Cách 1 :  Click chuột vào `Creat Template` góc trên bên phải màn hình.
 
 Sau khi click sẽ hiện ra :
-![cf](images/Creat_Template)
+![cf](/images/Creat_template)
 
 Trong đó :
 
@@ -106,7 +106,7 @@ Trong đó :
 
 Tạo liên kết các Template :
 
-![cf](/images/Linked_template)
+![cf](/images/Linked_t.png)
 
 Người quản trị có thể liên kết các Template với nhau nhằm bổ sung các thông số cho nhau giữa các template.
 
