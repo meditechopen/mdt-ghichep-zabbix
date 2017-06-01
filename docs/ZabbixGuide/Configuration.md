@@ -91,7 +91,7 @@ Delete and Clear : Xóa Template và các liên kết của nó với host.
 - Cách 1 :  Click chuột vào `Creat Template` góc trên bên phải màn hình.
 
 Sau khi click sẽ hiện ra :
-![cf](/images/Creat_template)
+![cf](/images/Creat_template.png)
 
 Trong đó :
 
