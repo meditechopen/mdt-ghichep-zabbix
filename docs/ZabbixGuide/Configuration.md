@@ -85,7 +85,7 @@ Trong đó :
 - Delete : Xóa các Template khỏi các liên kết của nó với các host.
 Delete and Clear : Xóa Template và các liên kết của nó với host.
 
-** Tạo 1 Template :**
+**Tạo 1 Template :**
 
 Để tạo 1 Template có 2 cách :
 - Cách 1 :  Click chuột vào `Creat Template` góc trên bên phải màn hình.
