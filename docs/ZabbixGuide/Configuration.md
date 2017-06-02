@@ -139,7 +139,7 @@ Trong đó :
 | Info | Hiển thị các thông tin lỗi |
 
 <a name=231></a>
-#### 2.3.2 Creat Host
+#### 2.3.1 Creat Host
 ![host](/images/Creat_hosts.png)
 
 Trong đó :
@@ -155,7 +155,8 @@ Trong đó :
 
 Trong mục Creat Host còn có một số tab bên cạnh như :  
 
-**Templates :** Mục này chứa các Template liên kết tới Host..
+**Templates :** Mục này chứa các Template liên kết tới Host.
+
 ![host](/images/Host_templates.png)
 
 Trong đó :
@@ -163,11 +164,27 @@ Trong đó :
 - Link new templates: thêm các Template kết nối với host.
 
 **IPMI :** Chứa các thuật toán xác thực và mức độ ưu tiên cho IPMI.
+
 ![host](/images/Host_IPMI.png)
 
 - Mục này cần phải cung cấp tài khoản của IPMI để mã hóa xác thực.
 
-**Macros :** 
+**Macros :** gán các biến Macro cho host
+
+![host](/images/Host_macro.png)
+
+**Host inventory :** Thêm các thông tin cho Host,có thể thêm bằng tay hoặc Zabbix sẽ tự động check và điền các thông tin.
+
+![host](/images/Host_inventory.png)
+
+**Encryption :** Chọn phương thức mã hóa đường truyền từ Zabbix Server đến Host.Mặc định là không mã hóa .
+
+![host](/images/Host_encrypt.png)
+
+Trong đó :
+- Connection to host : Phương thức mã hóa đường truyền tới host.
+- Connection from host : Phương thức mã hóa đường truyền từ host về Zabbix Server.
+
 
 
 <a name=232></a>
@@ -192,9 +209,59 @@ Có một số các tùy chọn sẵn có hoặc người quản trị có thể
 <a name=234></a>
 #### 2.3.4 Edit Mass Host
 
+![host](/images/Host_mass.png)
+
 Các tùy chọn này cho phép thay đổi các thông số cùng một lúc một hoặc nhiều host.
 - Enable : thay đổi trạng thái Host sang "Monitored"
 - Disable : Thay đổi trạng thái host sang "Not Monitored"
 - Export : Chuyển host thành file XML
 - Mass update : Đồng loạt cập nhật các thuộc tính cho máy chủ
-- Delete : Xoa các host
+- Delete : Xóa các host
+
+<a name=24></a>
+### 2.4 Maintenance
+
+Mục này cấu hình thời gian bảo trì máy chủ
+
+![host](/images/maintenance_periods.png)
+
+| Cột | Mô tả |
+|--------------|--------------|
+| Name | Tên của thời gian bảo trì. Click vào sẽ hiện ra bảng cấu hình bảo trì .
+| Type | Loại bảo trì , có 2 loại : trong quá trình bảo trì vẫn thu thập dữ liệu và không thu thập dữ liệu |
+| Active since | Ngày và thời gian kích hoạt bảo trì hoạt động |
+| Active till | Ngày và thời gian bảo trì ngừng hoạt động |
+| State | Trạng thái bảo trì . Có 3 loại : Approaching - Chuẩn bị active , Active - đang active, Expired- không active |
+| Description | Mô tả thời gian bảo trì |
+
+<a name=25></a>
+### 2.5 Actions
+
+Phần này giúp người quản trị cấu hình và duy trì các hành động, tác vụ.Hiển thị các danh sách các hành động được gán cho các sự kiện được cấu hình trước.
+
+![host](/images/actions.png)
+
+Trong đó :
+
+| Cột | Mô tả |
+|---------------|---------------|
+| Name | Tên hành động . Click vào sẽ hiển thị ra cấu hình hành động đó |
+| Conditions | Các điều kiện để Action  xảy ra |
+| Operations | Các hoạt động sẽ diễn ra được cấu hình trong Action |
+| Status | Hiển thị trạng thái của Action( Enable hoặc Disable) |
+
+Để cấu hình một Action mới, Click `Create Action` ở góc trên bên phải.
+
+![host](/images/action_create.png)
+
+Để Action kích hoạt thì cần có các điều kiện đi kèm
+
+![host](/images/action_condition.png)
+
+Trong đó :
+
+- Type of calculation : Biểu thức logic giữa các điều kiện.
+- Conditions : Các điều kiện
+- New condition : Thêm điều kiện mới
+
+Điều kiện càng khắt khe thì action hoạt động càng chuẩn và việc thực thi càng mang lại hiệu quả cao.Nhưng tránh việc các Điều kiện xung đột với nhau khiên action hoạt động sai hoặc là không hoạt động.
