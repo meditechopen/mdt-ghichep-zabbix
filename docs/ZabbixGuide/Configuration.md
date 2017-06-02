@@ -4,6 +4,10 @@
 ### [2.1 Host Groups](#21)
 ### [2.2 Template](#22)
 ### [2.3 Host](#23)
+#### [2.3.1 Creat host](#231)
+#### [2.3.2 Filter host](#232)
+#### [2.3.3 Import host](#233)
+#### [2.3.4 Edit Mass host](#234)
 ### [2.4 Maintenance](#24)
 ### [2.5 Actions](#25)
 ### [2.6 Discovery](#26)
@@ -134,14 +138,40 @@ Trong đó :
 |Agent encryption | Hiển thị trạng thái mã hóa đến các host . None : không mã hóa, PSK : sử dụng pre-shared key, Cert : sử dụng certificate |
 | Info | Hiển thị các thông tin lỗi |
 
-**Tùy chọn chỉnh sửa theo Host :**
-- Enable : thay đổi trạng thái Host sang "Monitored"
-- Disable : Thay đổi trạng thái host sang "Not Monitored"
-- Export : Chuyển host thành file XML
-- Mass update : Đồng loạt cập nhật các thuộc tính cho máy chủ
-- Delete : Xoa các host
+<a name=231></a>
+#### 2.3.2 Creat Host
+![host](/images/Creat_hosts.png)
 
-**Filter**
+Trong đó :
+- Host name : Tên máy chủ muốn thêm
+- Visible name : Tên hiển thị lên Zabbix
+- Group : Chọn nhóm quản lý host đó
+- New Group : Thêm một nhóm mà không có trong danh sách
+- Agent Interface : Chọn kiểu kết nối đến Host (Theo IP , Theo tên miền)
+- SNMP interface : Nếu host đó là Router, Switch ,.. hay các thiết bị mạng.
+- JMX Interface : Nếu host đó là các Java Application.
+- IPMI Interface : Nếu host đó là Intelligent Platform Management.
+- Description: Thêm ghi chú hoặc định nghĩa cho host.
+
+Trong mục Creat Host còn có một số tab bên cạnh như :  
+
+**Templates :** Mục này chứa các Template liên kết tới Host..
+![host](/images/Host_templates.png)
+
+Trong đó :
+- Linked templates : chứa các Teamplate mà host đã kết nối.
+- Link new templates: thêm các Template kết nối với host.
+
+**IPMI :** Chứa các thuật toán xác thực và mức độ ưu tiên cho IPMI.
+![host](/images/Host_IPMI.png)
+
+- Mục này cần phải cung cấp tài khoản của IPMI để mã hóa xác thực.
+
+**Macros :** 
+
+
+<a name=232></a>
+#### 2.3.2 Filter Host
 
 Chức năng này cho phép hiển thị các Host theo các tùy chọn Lọc :
 ![host](/images/hosts_filter.png)
@@ -150,3 +180,21 @@ Chức năng này cho phép hiển thị các Host theo các tùy chọn Lọc :
 - DNS like : Lọc theo DNS
 - IP like : Lọc theo  địa chỉ IP
 - Port like : Lọc theo port dịch vụ
+
+<a name=233></a>
+#### 2.3.3 Import Host
+Khi chọn Import host,Zabbix sẽ cho phép người quản trị thêm các Host bằng các file XML .
+
+![host](/images/Import_hosts.png)
+
+Có một số các tùy chọn sẵn có hoặc người quản trị có thể thêm các tùy chọn cho việc tạo thêm host mới cho hệ thống của mình.
+
+<a name=234></a>
+#### 2.3.4 Edit Mass Host
+
+Các tùy chọn này cho phép thay đổi các thông số cùng một lúc một hoặc nhiều host.
+- Enable : thay đổi trạng thái Host sang "Monitored"
+- Disable : Thay đổi trạng thái host sang "Not Monitored"
+- Export : Chuyển host thành file XML
+- Mass update : Đồng loạt cập nhật các thuộc tính cho máy chủ
+- Delete : Xoa các host
