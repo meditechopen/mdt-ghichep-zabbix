@@ -10,6 +10,7 @@
 #### [2.3.4 Edit Mass host](#234)
 ### [2.4 Maintenance](#24)
 ### [2.5 Actions](#25)
+### [2.5.1 Cảnh báo leo thang](#251)
 ### [2.6 Discovery](#26)
 ### [2.7 IT Service](#27)
 
@@ -254,6 +255,8 @@ Trong đó :
 
 ![host](/images/action_create.png)
 
+**Conditions :**
+
 Để Action kích hoạt thì cần có các điều kiện đi kèm
 
 ![host](/images/action_condition.png)
@@ -265,3 +268,55 @@ Trong đó :
 - New condition : Thêm điều kiện mới
 
 Điều kiện càng khắt khe thì action hoạt động càng chuẩn và việc thực thi càng mang lại hiệu quả cao.Nhưng tránh việc các Điều kiện xung đột với nhau khiên action hoạt động sai hoặc là không hoạt động.
+
+**Operations :**
+
+Chứa các hành động mà Action sẽ sử dụng để xử lý khi các điều kiện xảy ra.
+
+![host](/images/action_operation.png)
+
+- Default operation step duration : thời gian mặc định để chuyển giữa các mức(mặc định tối thiểu là 60s)
+- Action operation : Các hành hoạt động theo từng step sẽ được thực hiện từ trên xuống dưới.
+
+<a name=251></a>
+#### 2.5.1 Cảnh báo leo thang
+
+Phần này giúp tăng mức độ xử lý vấn đề khi có cảnh báo xảy ra.
+
+**Ví dụ 1**
+Để cấu hình gửi một thông báo lặp đi lặp lại mỗi 30 phút một lần (tổng cộng 5 lần) đến Admin Zabbix ta cấu hình như sau :
+
+![host](/images/action_lt.png)
+
+Trong đó :
+- Step : Số bước thực hiện hành động.
+- Step duration : Thời gian thực hiện step tiếp theo.
+- Operation : Loại thực hiện hành động. Có thể là gửi mail cảnh báo hoặc thực hiện các câu lệnh điều khiển.
+- Send to User Groups : Thực hiện chuyển các hành động này đến 1 nhóm nào đó.
+- Send to User : Thực hiện chuyển hành động này đến 1 người dùng hệ thống nào đó.
+- Send only to : Sử dụng phương thức nào để gửi cảnh báo .
+- Default message : Có thể sử dụng mẫu Message mặc định hoặc chỉnh sửa tùy ý.
+
+**Ví dụ 2**
+
+Gửi thông báo về 1 vấn đề mà sau 1 khoảng thời gian nào đó mà vẫn chưa được xử lý :
+
+![host](/images/action_lt2.png)
+
+Thông báo này sẽ được gửi đến toàn bộ các User của nhóm Zabbix Admin ở bước 3 của kịch bản nếu như sau 1 tiếng mà vấn đề vẫn chưa được giải quyết.
+
+**Ví dụ 3**
+
+Một trường hợp phức tạp hơn . Sau khi nhiều tin nhắn gửi đến quản trị viên mà vẫn không được giải quyết và leo thang lên đến nhóm quản trị Zabbix.Zabbix sẽ gửi tiếp cho Nhóm quản trị IT nếu sau 2 tiếng mà vẫn chưa giải quyết được vấn đề.
+
+- Bước 1 : Gửi thông báo đến Admin Zabbix 4 lần, mỗi lần cách nhau 20p.
+
+![host](/images/action_lt3.png)
+
+- Bước 2 : Gửi thông báo đến tất cả thành viên trong nhóm quản trị Zabbix nếu sau 1 tiếng mà chưa được giải quyết :
+
+![host](/images/action_lt4.png)
+
+- Bước 3 : Gửi thông báo đến toàn bộ nhóm IT Manager nếu sau 2 tiếng vấn đề chưa được giải quyết :
+
+![host](/images/action_lt5.png)
