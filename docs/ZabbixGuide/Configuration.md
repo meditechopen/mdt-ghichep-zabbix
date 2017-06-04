@@ -320,3 +320,40 @@ Một trường hợp phức tạp hơn . Sau khi nhiều tin nhắn gửi đế
 - Bước 3 : Gửi thông báo đến toàn bộ nhóm IT Manager nếu sau 2 tiếng vấn đề chưa được giải quyết :
 
 ![host](/images/action_lt5.png)
+
+<a name=26></a>
+### 2.6 Discovery
+
+Phần này giúp người quản trị khám phá ra các thiết bị hoạt động trong mạng hoặc hoặc một dải mạng nào đó sau đó duy trì sự giám sát đối với chúng.
+
+Danh sách các quy tắc và các dải mạng được khám phá :
+
+![host](/images/discovery_rules.png)
+
+Trong đó :
+
+| Cột | Mô tả |
+|------------|--------------|
+| Name | Tên của mạng đang khám phá |
+| Ip Range | Dải mạng đang khám phá |
+| Delay | Tần suất thực hiện khám phá |
+| Check | Các loại kiểm tra để phát hiện ra các thiết bị |
+| Status | Trạng thái của khám phá (Enable, Disable) |
+
+- Để cấu hình một quy tắc khám phá mới , Click vào `Create Discovery Rule`.Một hộp thoại sẽ hiển thị ra, các thông số cài đặt như bảng trên .
+
+Các tùy chọn chỉnh sửa theo nhóm :
+- Enable : Chuyển trạng thái khám phá thành `Bật`
+- Disable : Chuyển trạng thái khám phá sang `Tắt`
+- Delete : Xóa trạng thái khám phá
+
+Để sử dụng các tính năng này thì cần phải chọn một hoặc nhiều khám phá và thực hiện nó.
+
+<a name=27></a>
+### 2.7 IT Services
+
+Phần này giúp người quản trị có thể cấu hình và duy trì các dịch vụ về IT.
+
+Các dịch vụ này bắt đầu từ chỉ một thư mục gốc là thư mục `/root` . Coi nó như là một điểm khởi đầu của hệ thống và xây dựng các hệ thống phân cấp theo dõi dựa trên nó. Click vào `Add Child` để thêm các dịch vụ và quản lý nó.
+
+![host](/images/itservices_conf.png)
