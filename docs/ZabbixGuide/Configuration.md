@@ -172,7 +172,7 @@ Trong đó :
 
 **Macros :** gán các biến Macro cho host
 
-![host](/images/Host_macro.png)
+![host](/images/Host_macros.png)
 
 **Host inventory :** Thêm các thông tin cho Host,có thể thêm bằng tay hoặc Zabbix sẽ tự động check và điền các thông tin.
 
