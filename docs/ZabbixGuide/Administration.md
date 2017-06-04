@@ -176,4 +176,37 @@ Cấp quyền cho nhóm tới các Host , Host Group
 ![ad](/images/group_permition.png)
 
 <a name=25></a>
-### 2.4 User
+### 2.5 User
+
+Phần này cho phép quản lý, tùy chỉnh các tài khoản cho Zabbix
+
+Phần dưới hiển thị danh sách các user và thông tin chi tiết
+
+![ad](/images/users.png)
+
+Trong đó :
+
+| Cột | Mô tả |
+|---------------|------------|
+| Alias | Bí danh của người dùng |
+| Name | Tên người dùng |
+| Surname | Họ người dùng |
+| User Type | Loại người dùng (Phân cấp người dùng trong hệ thống )Zabbix Super Admin,Zabbix Admin hoặc Zabbix User |
+| Groups | Các nhóm quản lý người dùng |
+| Is online? | Trạng thái người dùng có Online hay không |
+| Login | Trạng thái đăng nhập của người dùng (Ok hoặc Block)|
+| Frontend access | Phương thức truy cập của người dùng |
+| Debug mode | Trạng thái chế độ sửa lỗi của người dùng |
+| Status | Trạng thái người dùng |
+
+Để tạo một User mới , tiến hành click vào `Create User`
+
+![ad](/images/user_creat.png)
+
+Gán các Media cho user
+
+![ad](/images/user_media.png)
+
+Cấp quyền User tới các Host
+
+![ad](/images/user_permit.png)
