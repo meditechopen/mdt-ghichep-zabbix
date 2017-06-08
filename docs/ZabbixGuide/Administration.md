@@ -201,7 +201,7 @@ Trong đó :
 
 Để tạo một User mới , tiến hành click vào `Create User`
 
-![ad](/images/user_creat.png)
+![ad](/images/user_create.png)
 
 Gán các Media cho user
 
