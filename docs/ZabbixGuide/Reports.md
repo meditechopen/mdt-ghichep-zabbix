@@ -14,7 +14,7 @@
 
 Phần này  hiển thị danh sách các báo cáo được xác định trước và người dùng có thể tùy chỉnh các hiển thị tổng quan về các thông số trạng thái của Zabbix, actions, dữ liệu thu thập,...
 
-<a name=tp</a>
+<a name=tp></a>
 ## II. Các thành phần
 
 Mục này có tất cả các thành phần con :
